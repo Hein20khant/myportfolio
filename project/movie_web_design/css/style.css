@@ -1,0 +1,616 @@
+@import url("https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap");
+
+/* font-family: 'Petit Formal Script', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(3, 3, 3);
+}
+
+:root {
+    --text-color: rgb(255, 255, 255);
+}
+
+
+/* @media (max-width:1600px)  */
+
+.back-img {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    border: 1px solid black;
+}
+
+.new-name {
+    color: var(--text-color);
+}
+
+.background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
+    filter: brightness(0.5);
+    /* display: none; */
+}
+
+.header {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    z-index: 1;
+}
+
+.lef-head {
+    font-size: 2rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+    margin-left: 25px;
+    font-family: "Petit Formal Script", cursive;
+}
+
+.hearder-btn {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    z-index: 1;
+}
+
+.hearder-btn a {
+    margin: 0px 30px;
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: capitalize;
+    filter: brightness(4);
+}
+
+.hearder-btn button {
+    background-color: red;
+    color: var(--text-color);
+    width: 60px;
+    height: 25px;
+    text-transform: capitalize;
+}
+
+.mov-tit {
+    position: absolute;
+    bottom: 10rem;
+    left: 10rem;
+    z-index: 1;
+}
+
+.mov-tit span {
+    font-size: 2rem;
+    color: rgba(250, 249, 249, 0.4);
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: "Petit Formal Script", cursive;
+}
+
+.mov-tit div {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-family: "Petit Formal Script", cursive;
+    padding: 50px;
+}
+
+.mov-tit button {
+    font-size: 2rem;
+    background-color: red;
+    color: var(--text-color);
+    width: 150px;
+    height: 60px;
+}
+
+.mov-tit p {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.icon-cv {
+    position: absolute;
+    bottom: 1px;
+    left: 100px;
+    z-index: 1;
+}
+
+.fa-brands {
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.icon-cv-play-btn {
+    position: absolute;
+    bottom: 200px;
+    right: 250px;
+    z-index: 1;
+}
+
+.icon-cv-play-btn .fa-play {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    padding: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.page {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+.pg-num {
+    font-size: 3rem;
+    margin: 20px;
+    color: rgb(206, 46, 46);
+    text-decoration: none;
+}
+
+html::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    /* width: rem; */
+    background-color: rgb(206, 63, 63);
+}
+
+.bd-tit {
+    width: 90%;
+    /* background-color: var(--text-color); */
+    display: flex;
+    position: relative;
+    margin: 30px auto;
+    border-bottom: 1px solid rgb(224, 90, 90);
+    /* background-color: rgb(32, 29, 29); */
+}
+
+.tit-text {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: "Petit Formal Script", cursive;
+    text-transform: capitalize;
+    color: var(--text-color);
+}
+
+.inp-search {
+    width: 300px;
+    height: 30px;
+    border: none;
+    /* text-decoration: none; */
+    outline: none;
+    position: absolute;
+    top: 3px;
+    right: 2px;
+}
+
+.fa-magnifying-glass {
+    color: var(--text-color);
+}
+
+.body-btn {
+    width: 79%;
+    margin: 10px auto;
+}
+
+.bd-hd-btn {
+    width: 80px;
+    height: 30px;
+    margin: 0px 40px;
+    background-color: red;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.movie-today-show {
+    max-width: 940px;
+    /* max-height: 90vh; */
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 2rem;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.mov-box-img {
+    width: 100%;
+    height: 270px;
+    position: relative;
+}
+
+.out-of-date {
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    position: absolute;
+    bottom: 19px;
+    right: 0px;
+    z-index: 2;
+    background-color: red;
+    color: var(--text-color);
+}
+
+.mig-bd {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.mov-name {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.mov-box span {
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+
+.more {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+.show-more {
+    color: var(--text-color);
+}
+
+.soon-tit {
+    width: 90%;
+    display: flex;
+    margin: 10px auto;
+    border-bottom: 1px solid rgb(224, 90, 90);
+}
+
+.soon-tit div {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: "Petit Formal Script", cursive;
+    color: var(--text-color);
+}
+
+.soon-show {
+    max-width: 940px;
+    /* max-height: 90vh; */
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 2rem;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.new-tit {
+    width: 90%;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.new-text {
+    color: var(--text-color);
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Petit Formal Script", cursive;
+}
+
+.new {
+    max-width: 99%;
+    /* max-height: 90vh; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.new-movies-img {
+    width: 100%;
+    height: 270px;
+}
+
+.mig-new {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(160, 148, 148);
+    margin-top: 100px;
+}
+
+.ft-btn {
+    margin: 0px 50px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.hearder-btn a:hover {
+    font-weight: 700;
+}
+
+.hearder-btn button:hover {
+    filter: brightness(3);
+}
+
+.mov-tit button:hover {
+    filter: brightness(3);
+    transform: scale(1.2);
+}
+
+.icon-cv-play-btn:hover {
+    filter: brightness(3);
+    transform: scale(1.2);
+}
+
+.icon-cv .fa-brands:hover {
+    filter: brightness(3);
+    transform: scale(1.2);
+}
+
+.page .pg-num:hover {
+    filter: brightness(3);
+}
+
+.bd-hd-btn:hover {
+    background-color: black;
+}
+
+.mig-bd:hover {
+    filter: brightness(2) drop-shadow(9px 9px 10px rgb(194, 48, 48));
+    transform: scale(1.1);
+}
+
+.mig-new:hover {
+    filter: brightness(2) drop-shadow(9px 9px 10px rgb(194, 48, 48));
+    transform: scale(1.1);
+}
+
+.footer-icon .fa-brands:hover {
+    filter: brightness(3);
+    transform: scale(1.2);
+}
+
+.ft-btn:hover {
+    color: rgb(194, 48, 48);
+}
+
+@media (max-width: 1100px) {
+    .bd-hd-btn {
+        width: 60px;
+        height: 30px;
+        margin: 0px 20px;
+    }
+    img {
+        width: 700px;
+    }
+}
+
+@media (max-width: 970px) {
+    .back-img .hearder-btn {
+        display: none;
+    }
+    .bd-tit .search {
+        width: 50px;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .new {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .inp-search {
+        display: none;
+    }
+    .bd-tit .search .fa-magnifying-glass {
+        display: none;
+    }
+    .pg-num {
+        font-size: 2rem;
+    }
+    .icon-cv-play-btn {
+        bottom: 100px;
+        right: 150px;
+        z-index: 1;
+    }
+    .icon-cv-play-btn .fa-play {
+        font-size: 2rem;
+    }
+    .mov-tit span {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    .mov-tit div {
+        font-size: 1rem;
+    }
+    .mov-tit button {
+        font-size: 1rem;
+        width: 100px;
+        height: 30px;
+    }
+    .mov-tit p {
+        font-size: 15px;
+    }
+    .icon-cv {
+        bottom: 5px;
+        left: 50px;
+        z-index: 1;
+    }
+    .fa-brands {
+        font-size: 1rem;
+        margin: 15px;
+    }
+    .tit-text {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 750px) {
+    .movie-today-show {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+    }
+    .soon-show {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+    }
+    .new {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .bd-hd-btn {
+        width: 60px;
+        height: 30px;
+        margin: 0px 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    .pg-num {
+        font-size: 1rem;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .ft-btn {
+        margin: 10px 10px;
+    }
+    .pg-num {
+        font-size: 1rem;
+        margin: 10px;
+    }
+    .tit-text {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+    .bd-hd-btn {
+        width: 60px;
+        height: 30px;
+        margin: 0px 10px;
+    }
+    .body-btn {
+        width: 90%;
+        margin: 10px auto;
+    }
+    .lef-head {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 465px) {
+    .bd-hd-btn {
+        display: none;
+    }
+}
+
+@media (max-width: 455px) {
+    .pg-num {
+        font-size: 0.6rem;
+        margin: 5px;
+    }
+    .icon-cv-play-btn .fa-play {
+        font-size: 1rem;
+    }
+    .mov-tit {
+        left: 10px;
+    }
+    .mov-tit span {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .mov-tit div {
+        font-size: 0.6rem;
+    }
+    .mov-tit button {
+        font-size: 0.6rem;
+        width: 100px;
+        height: 30px;
+    }
+    .mov-tit p {
+        font-size: 9px;
+    }
+    .icon-cv {
+        bottom: 3px;
+        left: 50px;
+        z-index: 1;
+    }
+    .fa-brands {
+        font-size: 0.8rem;
+        margin: 9px;
+    }
+    .img-bd {
+        width: 150px;
+    }
+    .new-text {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+    .soon-tit div {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+    .lef-head {
+        font-size: 1rem;
+    }
+    .tit-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 305px) {
+    .fa-brands {
+        font-size: 0.8rem;
+        margin: 9px;
+    }
+    .icon-cv {
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 290px) {
+    .mig-new {
+        width: 100px;
+    }
+    .ft-btn {
+        font-size: 0.5rem;
+    }
+    .tit-text {
+        font-size: 0.5rem;
+    }
+}

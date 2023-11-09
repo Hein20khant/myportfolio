@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My_portfolio</title>
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
     <!-- bootstrap icon -->
     <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.css">
+    <!-- aos css -->
+    <!-- <link rel="stylesheet" href="assets/aos/aos.css"> -->
     <!-- main css -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- google font -->
@@ -20,20 +22,21 @@
 </head>
 
 <body>
-    <i class="bi bi-list d-xl-none mobile_nav_toggle"></i>
-    <header id="header">
+    <i id="mobile_nav_open" class="bi bi-list mobile_nav_toggle"></i>
+    <i id="mobile_nav_close" class="bi bi-x-lg mobile_nav_close"></i>
+    <header class="mobile_nav" id="header">
         <div class="d-flex flex-column">
             <div class="title mb-3">
                 <h3>My Portfolio</h3>
             </div>
             <div id="profile">
                 <img class=" mb-2 img-fluid rounded-circle" src="assets/image/my_picture_2.webp" alt="">
-                <h1 class="mb-2">Hein Khant</h1>
+                <h3 class="mb-2">Hein Khant</h3>
                 <div class="link_social mt-3">
-                    <a href="#"><i class="bi bi-youtube"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://twitter.com"><i class="bi bi-twitter"></i></a>
                 </div>
             </div>
             <nav class="navbar nav-menu">
@@ -44,9 +47,14 @@
                     <li class=""><a href="#contact" class="nav-link"><i class="bi bi-envelope"></i>Contact</a></li>
                 </ul>
             </nav>
-            <div class="btn-group m-auto">
-                <button class="btn text-dark btn-outline-info me-2" id="light_btn">light mode</button>
-                <button class="btn text-dark btn-outline-info" id="dark_btn">dark mode</button>
+            <div class="light" id="mode_group">
+                <div class="light_dark">
+                    <span class="toggle" id="light_dark_toggle">
+                        <i class="bi bi-brightness-high-fill"></i>
+                        <i class="bi bi-moon-stars"></i>
+                        <span class="ball"></span>
+                    </span>
+                </div>
             </div>
         </div>
     </header>
@@ -66,29 +74,33 @@
 
                 <div class="section-title">
                     <h2>About</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi
-                        quidem hic quas.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quod, numquam distinctio nesciunt libero id dolor ducimus natus labore, pariatur animi commodi praesentium hic, perferendis veniam totam at dolores minus. Magni ut, quaerat
+                        labore, illum repellendus omnis expedita adipisci maiores rem voluptatibus eligendi commodi inventore nihil accusamus, repellat error nulla recusandae repudiandae rerum magnam. Ducimus necessitatibus dignissimos dolore accusamus
+                        magni. In a quod minus fugit asperiores consequuntur, eos dignissimos odit nostrum autem unde ab commodi necessitatibus soluta, est ut ipsum molestias aspernatur saepe doloribus? Delectus, similique provident. Iusto, nisi optio.
+                        Quos unde vitae quo adipisci magni consequuntur dicta officiis, perspiciatis eos, consequatur laboriosam nam? Omnis amet asperiores accusamus magnam. Omnis quisquam dolorem aut quibusdam atque impedit ducimus facere? Dolorum, sint.
+                        Eveniet consequuntur laudantium repudiandae temporibus similique sapiente iste eaque tempora culpa dolores asperiores repellendus exercitationem magni, libero quo perferendis deserunt. Nisi numquam illum voluptatem accusantium
+                        totam, magnam qui rem dignissimos! Quia expedita amet nihil corporis facilis maxime, voluptatum quos commodi ipsam ratione quae natus nostrum doloremque, fuga veniam laboriosam et molestias?</p>
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-4" data-aos="fade-right">
+                    <div class="col-lg-4 hidden" data-aos="fade-right">
                         <img src="assets/image/my_prcture_1.jpeg" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                         <h3>UI/UX Designer &amp; Web Developer.</h3>
                         <p class="fst-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            I'm not finish yet this portfolio. I don't want to upload this but i must be upload because i need to show somebody. So, Forgive me if there is necessary.
                         </p>
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 hidden">
                                 <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>55 Apirl 2005</span></li>
                                     <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
                                     <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Insein, Yangon</span></li>
                                 </ul>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 hidden">
                                 <ul>
                                     <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
                                     <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
@@ -119,7 +131,7 @@
 
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app hidden">
                         <div class="portfolio-wrap">
                             <img src="assets/image/projectFolder/Screenshot 2023-02-26 184851.png" class="img-fluid" style="height: 350px;" alt="">
                             <div class="portfolio-links">
@@ -129,7 +141,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app hidden">
                         <div class="portfolio-wrap">
                             <img src="assets/image/projectFolder/Screenshot 2023-02-26 191244.png" class="img-fluid" style="height: 350px;" alt="">
                             <div class="portfolio-links">
@@ -139,7 +151,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app hidden">
                         <div class="portfolio-wrap">
                             <img src="assets/image/projectFolder/Screenshot (22).png" class="img-fluid" style="height: 350px;" alt="">
                             <div class="portfolio-links">
@@ -149,20 +161,20 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app hidden">
                         <div class="portfolio-wrap">
-                            <img src="assets/image/projectFolder/Screenshot (20).png" class="img-fluid" style="height: 350px;" alt="">
+                            <img src="assets/image/projectFolder/Screenshot (39).png" class="img-fluid" style="height: 350px;" alt="">
                             <div class="portfolio-links">
-                                <a href="assets/image/projectFolder/Screenshot (20).png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
+                                <a href="project/pizza-order/infoindex.html" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
                             </div>
                         </div>
                     </div>
                     <!-- <button disabled></button> -->
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app hidden">
                         <div class="portfolio-wrap">
                             <img src="assets/image/projectFolder/Screenshot (29).png" class="img-fluid" style="height: 350px;" alt="">
                             <div class="portfolio-links">
-                                <a href="assets/image/cover.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
+                                <a href="project/media_project/index.html" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -213,28 +225,23 @@
                         <form action="#" onsubmit="contactUs(); reset(); return false;" method="post" class="php-email-form">
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <label for="name">Your Name</label>
+                                    <label for="User_name">Your Name</label>
                                     <input type="text" name="name" class="form-control" id="User_name">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="name">Your Email</label>
+                                    <label for="User_email">Your Email</label>
                                     <input type="email" class="form-control" name="email" id="User_email">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="name">Subject</label>
+                                <label for="Main_subject">Subject</label>
                                 <input type="text" class="form-control" name="subject" id="Main_subject">
                             </div>
                             <div class="form-group">
-                                <label for="name">Message</label>
+                                <label for="Contact_message">Message</label>
                                 <textarea class="form-control" name="message" id="Contact_message" rows="10"></textarea>
                             </div>
-                            <div class="my-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                            </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
+                            <div class="text-center mt-2"><button type="submit">Send Message</button></div>
                         </form>
                     </div>
 
@@ -254,6 +261,7 @@
 </body>
 <script src="assets/typed.js/typed.min.js"></script>
 <script src="assets/js/main.js"></script>
+<!-- <script src="assets/aos/aos.js"></script> -->
 <script type="text/javascript" src="node_modules/@emailjs/browser/dist/email.min.js"></script>
 <script type="text/javascript">
     (function() {

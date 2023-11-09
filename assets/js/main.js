@@ -1,6 +1,3 @@
-/**
- * type annimation
- */
 (function() {
     // "use strict";
 
@@ -17,7 +14,7 @@
     }
 
     /**
-     * annimation
+     * annimation typed
      */
     const typed = select('.typed')
     if (typed) {
@@ -31,6 +28,10 @@
             backDelay: 2000
         });
     }
+
+    /**
+     * Back to top button
+     */
     let backtotop = select('.back-to-top')
     if (backtotop) {
         const toggleBacktotop = () => {
@@ -43,7 +44,17 @@
         window.addEventListener('scroll', toggleBacktotop)
         scroll(document, toggleBacktotop)
     }
-
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        }, { rootMargin: "-50px" })
+    })
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
 })()
 
 function contactUs() {
@@ -68,11 +79,29 @@ function contactUs() {
         alert("try")
     }
 }
+let mode_btn = document.getElementById('light_dark_toggle');
+var icon = document.getElementById('mode_group');
 
-// document.getElementById("light_btn").addEventListener("click", function() {
-//     document.getElementById('header').classList.
-// });
-
-// document.getElementById("dark_btn").addEventListener("click", function() {
-//     console.log("this is dark btn");
-// });
+mode_btn.onclick = function() {
+    document.body.classList.toggle('dark-theme');
+    if (document.body.classList.contains('dark-theme')) {
+        icon.classList.remove('light');
+        icon.classList.add('dark');
+    } else {
+        icon.classList.remove('dark');
+        icon.classList.add('light');
+    }
+}
+var nav_mobile = document.getElementById('mobile_nav_open');
+var close_btn = document.getElementById('mobile_nav_close');
+var header = document.getElementById('header');
+nav_mobile.onclick = function() {
+    header.style.left = "0px";
+    nav_mobile.style.display = "none";
+    close_btn.style.display = "inline"
+}
+close_btn.onclick = function() {
+    header.style.left = "-300px";
+    close_btn.style.display = "none";
+    nav_mobile.style.display = "inline";
+}
